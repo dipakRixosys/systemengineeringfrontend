@@ -1,0 +1,38 @@
+{
+  "name": "simulate-attack-steps",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://api.cybergenics.co.uk/simulate-attack-steps",
+  "main": "main.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "d3": "^3.5.5",
+    "events": "^1.1.0",
+    "flux": "^2.1.1",
+    "jquery": "^2.1.4",
+    "named-regexp": "^0.1.1",
+    "range": "0.0.3",
+    "react": "^15.1.0",
+    "react-addons-linked-state-mixin": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "sprintf-js": "^1.0.2",
+    "xmldom": "^0.1.19"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
+}

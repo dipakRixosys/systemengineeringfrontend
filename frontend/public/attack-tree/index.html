@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack Tree Preview</title>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="/attack-tree/parser.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="d3Chart"></div>
+
+    <script>
+      let steps = [
+        {
+          'name': "Threat",
+          'type': 'START'
+        },
+        {
+          'name': "Step 01",
+          'type': 'AND',
+          'data': [
+            {
+              "title": "IR",
+              "value": "Medium",
+            },
+            {
+              "title": "AFR",
+              "value": "High",
+            },
+            {
+              "title": "RR",
+              "value": "4",
+            },
+          ]
+        },
+        {
+          'name': "Step 01.A",
+          'type': 'AND',
+          'data': [
+            {
+              "title": "IR",
+              "value": "Medium",
+            },
+            {
+              "title": "AFR",
+              "value": "High",
+            },
+            {
+              "title": "RR",
+              "value": "4",
+            },
+          ],
+          'htmlContent': "Sample HTML Content"
+        },
+        {
+          'name': "Step 02",
+          'type': 'AND'
+        },
+        {
+          'name': "Step 03.1",
+          'type': 'OR'
+        },
+        {
+          'name': "Step 03.2",
+          'type': 'OR'
+        },
+        {
+          'name': "Step 04",
+          'type': 'AND'
+        },
+        {
+          'name': "Step 04.2",
+          'type': 'AND'
+        },
+        {
+          'name': "Step 04.3",
+          'type': 'AND'
+        },
+        {
+          'name': "Step 05.1",
+          'type': 'OR'
+        },
+        {
+          'name': "Step 05.2",
+          'type': 'OR'
+        },
+        {
+          'name': "Step 06",
+          'type': 'AND'
+        },
+        {
+          'name': "Step 07",
+          'type': 'END'
+        },
+      ];
+      let p = new Parser();
+      p.setSteps(steps);
+      p.makeD3Graph('#d3Chart');
+    </script>
+  </body>
+</html>

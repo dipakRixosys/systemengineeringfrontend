@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack Tree Preview</title>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="/attack-tree/parser.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="d3Chart"></div>
+
+    <script>
+      var width = 1500;
+      var height = 1000;
+
+      // Create SVG element
+      var svg = d3.select("#d3Chart")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+      //
+      var g = svg.append("g")
+        .attr("transform", function(d, i) {
+          return "translate(0,0)";
+        });
+
+      //
+      let xOffset = 100;
+      let yOffset = 0;
+      
+      //
+      g.append("rect")
+        .attr("x", 0 + xOffset)
+        .attr("y", 0)
+        .attr("fill", "#111")
+        .attr("width", 200)
+        .attr("height", 100);
+
+      g.append("text")
+        .attr("x", 100 + xOffset)
+        .attr("y", 50)
+        .attr("text-anchor", "middle")
+        .attr("fill", "#fff")
+        .text("Threat");
+
+        g.append("line")
+          .attr("x1", 100 + xOffset)
+          .attr("y1", 100)
+          .attr("x2", 100 + xOffset)
+          .attr("y2", 200)
+          .attr("stroke", "black");
+
+      g.append("rect")
+        .attr("x", 0 + xOffset)
+        .attr("y", 200)
+        .attr("fill", "#111")
+        .attr("width", 200)
+        .attr("height", 100);
+      
+      g.append("text")
+        .attr("x", 100 + xOffset)
+        .attr("y", 250)
+        .attr("text-anchor", "middle")
+        .attr("fill", "#fff")
+        .text("Step 01");
+
+      g.append("rect")
+        .attr("x", 0)
+        .attr("y", 400)
+        .attr("fill", "#333")
+        .attr("width", 200)
+        .attr("height", 100);
+      
+      g.append("text")
+        .attr("x", 100)
+        .attr("y", 450)
+        .attr("text-anchor", "middle")
+        .attr("fill", "#fff")
+        .text("Step 02.A.1");
+
+      g.append("line")
+        .attr("x1", 100 + xOffset)
+        .attr("y1", 300)
+        .attr("x2", 0 + xOffset)
+        .attr("y2", 400)
+        .attr("stroke", "black");
+
+      g.append("rect")
+        .attr("x", 250)
+        .attr("y", 400)
+        .attr("fill", "#333")
+        .attr("width", 200)
+        .attr("height", 100);
+      
+      g.append("text")
+        .attr("x", 350)
+        .attr("y", 450)
+        .attr("text-anchor", "middle")
+        .attr("fill", "#fff")
+        .text("Step 02.B.1");
+      
+      g.append("line")
+        .attr("x1", 100 + xOffset)
+        .attr("y1", 300)
+        .attr("x2", 250 + xOffset)
+        .attr("y2", 400)
+        .attr("stroke", "black");
+
+      g.append("rect")
+        .attr("x", 100)
+        .attr("y", 600)
+        .attr("fill", "#111")
+        .attr("width", 200)
+        .attr("height", 100);
+
+      g.append("line")
+        .attr("x1", 0 + xOffset)
+        .attr("y1", 500)
+        .attr("x2", 100 + xOffset)
+        .attr("y2", 600)
+        .attr("stroke", "black");
+
+      g.append("line")
+        .attr("x1", 250 + xOffset)
+        .attr("y1", 500)
+        .attr("x2", 100 + xOffset)
+        .attr("y2", 600)
+        .attr("stroke", "black");
+
+      g.append("text")
+        .attr("x", 100 + xOffset)
+        .attr("y", 650)
+        .attr("text-anchor", "middle")
+        .attr("fill", "#fff")
+        .text("Step 03");
+
+      g.append("rect")
+        .attr("x", 100)
+        .attr("y", 800)
+        .attr("fill", "#111")
+        .attr("width", 200)
+        .attr("height", 100);
+
+      g.append("text")
+        .attr("x", 100 + xOffset)
+        .attr("y", 850)
+        .attr("text-anchor", "middle")
+        .attr("fill", "#fff")
+        .text("Step 04");
+
+      g.append("text")
+        .attr("x", 100 + xOffset)
+        .attr("y", 850)
+        .attr("dx", -60)
+        .attr("dy", 15)
+        .attr("font-size", '10px')
+        .attr("text-anchor", "middle")
+        .attr("fill", "#fff")
+        .text("AFR: Medium");
+
+      g.append("text")
+        .attr("x", 100 + xOffset)
+        .attr("y", 850)
+        .attr("dx", 10)
+        .attr("dy", 15)
+        .attr("font-size", '10px')
+        .attr("text-anchor", "middle")
+        .attr("fill", "#fff")
+        .text("IR: Medium");
+
+      g.append("text")
+        .attr("x", 100 + xOffset)
+        .attr("y", 850)
+        .attr("dx", 70)
+        .attr("dy", 15)
+        .attr("font-size", '10px')
+        .attr("text-anchor", "middle")
+        .attr("fill", "#fff")
+        .text("RR: 4");
+      
+      g.append("line")
+        .attr("x1", 200)
+        .attr("y1", 700)
+        .attr("x2", 200)
+        .attr("y2", 800)
+        .attr("stroke", "black");
+
+    </script>
+  </body>
+</html>

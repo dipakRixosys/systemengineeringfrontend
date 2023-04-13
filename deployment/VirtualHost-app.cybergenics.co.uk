@@ -1,0 +1,18 @@
+<VirtualHost *:443>
+  ServerAdmin info@etherealcorporate.com
+  ServerName app.cybergenics.co.uk
+  DocumentRoot /home/bitnami/htdocs/app.cybergenics.co.uk
+  <Directory /home/bitnami/htdocs/app.cybergenics.co.uk>
+      Options Indexes FollowSymLinks
+      AllowOverride All
+      Require all granted
+  </Directory>
+  ErrorLog /home/bitnami/logs/app.cybergenics.co.uk-error.log
+  <IfModule mod_dir.c>
+      DirectoryIndex index.html index.php
+  </IfModule>
+
+  SSLEngine on
+  SSLCertificateFile /etc/letsencrypt/live/app.cybergenics.co.uk/cert.pem
+  SSLCertificateKeyFile /etc/letsencrypt/live/app.cybergenics.co.uk/privkey.pem
+</VirtualHost>

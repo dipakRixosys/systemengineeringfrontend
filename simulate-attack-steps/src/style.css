@@ -1,0 +1,112 @@
+path.link {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+rect.node {
+  fill: #ffffff;
+  fill-opacity: .5;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+rect.node:hover {
+  cursor: pointer;
+}
+text.node {
+  font-size: 12px;
+}
+text.node:hover {
+  cursor: pointer;
+}
+circle.join {
+  fill: #ffffff;
+  fill-opacity: 1;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+text.join {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+nav {
+  background: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+}
+ul.icon-bar {
+  margin-bottom: 0;
+}
+ul.icon-bar li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+ul.icon-bar li a {
+  display: block;
+  padding: 10px 15px;
+}
+ul.icon-bar li a:hover {
+  cursor: pointer;
+  background: #f5f5f5;
+}
+.sidebar-container {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  z-index: 1;
+}
+.sidebar {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  padding: 10px 10px 5px;
+}
+.sidebar h1 {
+  font-size: 1.3em;
+  text-align: center;
+}
+.sidebar textarea {
+  border-radius: 0;
+  display: block;
+  font-family: menlo, monaco, monospace;
+  font-size: 0.7em;
+  min-height: 250px;
+  max-width: 280px;
+  min-width: 280px;
+}
+.sidebar button {
+  width: 100%;
+}
+.alerts {
+  left: 10px;
+  margin-top: 10px;
+  position: absolute;
+  z-index: 1;
+}
+.alert {
+  color: #ffffff;
+  display: none;
+  float: left;
+  padding: 7px 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+.error {
+  background: #b10e1e;
+}
+.success {
+  background: #6bd064;
+}
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+html {
+  background: #ffffff;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 0;
+}
+main {
+  height: 100%;
+}
